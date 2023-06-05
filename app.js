@@ -32,12 +32,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
-app.options('*',cors())
+// app.options('*',cors())
 //
-// app.use(compress());
+app.use(compress());
 // secure apps by setting various HTTP headers
 // app.use(helmet());
-// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 //Routes
 app.use("/api", authRoutes);
