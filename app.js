@@ -34,10 +34,7 @@ app.use(cookieParser());
 // app.use(cors());
 app.use(
   cors({
-    origin: ["https://master--bejewelled-granita-02f460.netlify.app"],
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true,
-    origin: true,
+    origin: "https://master--bejewelled-granita-02f460.netlify.app",
   })
 );
 // app.options('*',cors())
